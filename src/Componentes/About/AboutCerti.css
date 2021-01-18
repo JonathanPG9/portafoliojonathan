@@ -1,0 +1,95 @@
+
+.certificaciones{
+    background-image: url(../Imagenes/imgFondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+}
+
+.certificados{
+    width: 73%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+   flex-flow: column;
+}
+
+.diplomas{
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+    width: 80%;
+}
+.certificados img{
+    width: 90%;
+    height: 90%  ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.close{
+    display: flex;
+    position: relative;
+    margin: auto;
+    color: white;
+    cursor: pointer; 
+    transform: scale(1.4);
+}
+
+.arrows{
+    display: flex;
+    position: relative;
+    margin: auto;
+    color: white;
+    cursor: pointer;
+   transform: scale(2);
+}
+
+@media (max-width:760px){
+
+.arrows{
+    transform: scale(1.4);
+ }
+.close{
+    transform: scale(1);
+}
+.certificaciones{
+    height: 100vh;
+}
+ .certificados{ 
+     background: none;
+  color: white;
+  font-size: 10px;
+
+ }
+ .certificados img{
+     width: 400px;
+ }
+ .diplomas{
+    background: none;
+ }
+ 
+}
+
+@media (max-width:480px){
+    .arrows{
+        transform: scale(0.7);
+     }
+    .close{
+        transform: scale(0.7);
+    }
+    .certificados img{
+        width: 120%;
+    }
+
+} 

@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  .footer {
+    height: 20vh;
+    background-color: black;
+    box-shadow: 0 5px 15px white;
+  
+    z-index: 100;
+  }
+  
+  footer {
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .footer-line {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    margin: 0px auto;
+    background: white;
+    height: 2px;
+    width: 80%;
+  }
+  
+  .footer-line p {
+    margin-top: 4px;
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: end;
+    line-height: 1.4;
+    color: white;
+  }
+  
+  .icon {
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+  }
+  
+  .icon:nth-child(1):hover {
+    transform: scaleY(-1);
+  
+  }
+  .icon:nth-child(2):hover {
+    color:  #0077b5;
+  }
+  .icon:nth-child(3):hover {
+    transform: scale(1.3);
+   }
+  .icon:nth-child(4):hover {
+    color: #FF0000;
+  }
+  .icon:nth-child(5):hover {
+    color: #25d366;
+  }
+  
+  .toggle-mail{
+  display: flex;
+   background: rgba(255, 255, 255, 0.9);;
+   width: 250px;
+   height: 80px;
+   border-radius: 40px;
+   margin-top: -100px;
+   position: absolute;
+  }
+  
+  .toggle-mail h4{
+    color:  black;
+    margin:auto;
+    display: flex;
+    text-align: center;
+    font-size: 13px;
+  }
+
+
+  @media  (max-width: 460px) {
+    
+    .footer{
+      height: 28vh; 
+    }
+     
+    .footer-line{
+      margin-top:18px
+    }
+  }
