@@ -102,6 +102,19 @@
     transform: translate(0, -1em) rotate(-45deg);
     animation: push 2.5s cubic-bezier(.79, 0, .47, .97) infinite;
   }
+  .flecha{
+    transform:scale(1.5); 
+     justify-content:center;
+     align-content:center;
+     align-items:center; 
+     right:0; 
+    top: 250px;    
+  display:flex; 
+   z-index:230; 
+  position:fixed;
+  color:wheat; 
+  cursor: pointer;
+}
   
   @keyframes push {
     0% {

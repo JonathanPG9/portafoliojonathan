@@ -14,8 +14,8 @@ const Projects = () => {
          
         const llamarPikachu = async () =>{
             
-            const llamar = await fetch("https://backendjonathan-portafolio.herokuapp.com/api/pikachu")
-            try{
+             try{
+                const llamar = await fetch("https://backendjonathan-portafolio.herokuapp.com/api/pikachu") 
                 const traido = await llamar.json()
                 let img = await traido.sprites.front_default
                 setPikachu(img) 

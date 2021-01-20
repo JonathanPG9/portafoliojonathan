@@ -4,6 +4,8 @@ import Navbar from "./Componentes/Navbar/Navbar"
 import About from  "./Componentes/About/About.jsx"
 import Contacto from "./Componentes/Contacto/Contacto.jsx"
 import Footer from "./Componentes/Footer/Footer"
+import Sidebar from "./Componentes/Navbar/Sidebar/Feedback"
+import Error from "./Componentes/404/Error"
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,6 +34,7 @@ function App() {
           ?
         <Fragment>
  <Router>
+   <Sidebar/> 
       <Navbar
        nav={nav}
       /> 
@@ -53,6 +56,11 @@ function App() {
             setNav={setNav}
             />
             </Route>   
+            <Route    >
+              <Error 
+               setNav={setNav}
+              /> 
+            </Route>  
         </Switch>
         <Footer/> 
       </Router>

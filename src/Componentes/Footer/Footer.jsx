@@ -12,7 +12,7 @@ const Footer = () => {
 
     let linkedin = "https://www.linkedin.com/in/jonathan-paniagua-802703149/"
     let wsp = "https://api.whatsapp.com/send?phone=5491122856540&text=Hola%20Jonathan%20!"
-    
+    let github = "https://github.com/JonathanPG9"
     const up = () => {
       
         window.scrollTo({
@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="footer"> 
              
                 <footer>
-                <GitHubIcon className="icon"  />     
+                <GitHubIcon className="icon"  onClick={()=> window.open(github)}/>     
                 <LinkedInIcon className="icon" onClick={() => window.open(linkedin)} />  
                 <ArrowUpwardIcon  className="icon"   onClick={() => up() }  /> 
                 <MailOutlineIcon className="icon"  onClick={() => setMail(!mail)} />   

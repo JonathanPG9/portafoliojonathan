@@ -1,11 +1,11 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import HomeVisual from "./HomeVisual"
 import Projects from "./Projects/Projects"
- 
+// import Feedback from "../Navbar/Sidebar/Feedback"
 const Home = (props) => {
      const [load,setLoad] = useState(false)
     //  const [nombre,setNombre] = useState("")
-    const [api,setApi] = useState()
+    // const [api,setApi] = useState()
 
      let lanzar = props.carga
 
@@ -34,28 +34,29 @@ const Home = (props) => {
   }, 20);
 
  
-   useEffect(() =>{
+  //  useEffect(() =>{
 
-      const LlamarApi = async () =>{
+  //     const LlamarApi = async () =>{
          
-          const llamando = await fetch("https://backendjonathan-portafolio.herokuapp.com/api/feedback")
-          const traido = await llamando.json()
+  //         const llamando = await fetch("https://backendjonathan-portafolio.herokuapp.com/api/feedback")
+  //         const traido = await llamando.json()
            
-         setApi(traido)
-      }  
+  //        setApi(traido)
+  //     }  
 
-      LlamarApi()
+  //     LlamarApi()
 
-   },[]) 
+  //  },[]) 
 
     return ( 
         <Fragment>
+           {/* <Feedback></Feedback> */}
          <HomeVisual
           welcome={welcome}
           load={load}
          />
           <Projects/>
-
+         
          </Fragment>
      );
 }
