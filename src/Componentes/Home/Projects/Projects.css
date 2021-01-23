@@ -45,7 +45,7 @@
     transition: 0.4s ease-in-out;
   }
   
-  .card:hover {
+  .card:hover  {
     height: 472px;
     background: rgba(0, 0, 0, 1);
   }
@@ -82,7 +82,7 @@
     text-transform: initial;
     font-size: 15px;
   }
-  .card:hover .projects-body {
+  .card:hover .projects-body ,.card:focus .projects-body , .card:active .projects-body  {
     visibility: visible;
     opacity: 1;
     transition-delay: 0.4s;
@@ -129,20 +129,21 @@
       } 
     
       }
-      @media all and (max-width:330px){
+      @media all and (max-width:300px){
    
         .card-img { 
            width: 180px;
         
         }
         .card-img img { 
-          width: 180px;
+          width: 200px;
           margin-left:-13px;
         }
       
         .card{
           width: 200px;
         } 
+ 
       
         }
         

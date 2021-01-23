@@ -48,7 +48,7 @@ const Contacto = (props) => {
        <input name="nombre" placeholder="Nombre" ref={register({
          required:{value:true,message:"Nombre Requerido"},
          pattern: {
-            value: /^[ñA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/i
+            value: /^[ñA-Za-z_]*[ñA-Za-z][ñA-Za-z_]*$/i
             , message: "Por favor no ingrese espacios,numeros ni caracteres especiales"
           }
        })}/>

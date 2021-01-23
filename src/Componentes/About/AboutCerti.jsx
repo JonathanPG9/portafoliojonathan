@@ -49,7 +49,7 @@ const Certi = styled.div`
  const AboutCerti = (props) => {
 
    const nextJs = () =>{   
-    props.certiJs === 8 ? props.setCertiJs(0) : props.setCertiJs(props.certiJs + 1)
+    props.certiJs === 9 ? props.setCertiJs(0) : props.setCertiJs(props.certiJs + 1)
    }
    const backJs = () =>{   
     props.certiJs <= 0 ?     props.setCertiJs(0) :  props.setCertiJs(props.certiJs - 1)
@@ -81,7 +81,7 @@ const Certi = styled.div`
                
                )
           }  
-              <Error className="mostrar" >{props.diplomas[9].nombre}</Error>
+              <Error className="mostrar" >{props.diplomas[10].nombre}</Error>
 
                   <CancelPresentationIcon    className="close" onClick={() => props.setCerti(!props.certi)} /> 
         

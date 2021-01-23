@@ -9,7 +9,7 @@ const Side = styled.div`
  height: 100vh;
  width:  ${({ open   }) => open ? `70vh` : `0px` };
   background-color: black; 
- transition: all 1s;  
+ transition: width 1s;   
  right:0; 
  top: 0;   
  z-index:200; 
@@ -17,20 +17,33 @@ const Side = styled.div`
   color:white; 
  word-wrap: break-word;
  text-align:center;
- /* overflow-y: scroll; */
-  
+ overflow-y: scroll; 
+ 
+ @media (max-width:550px){
+
+    width:  ${({ open   }) => open ? `100%` : `0px` };
+ }
+
 form{
-    display: ${({open}) => open ? "flex" : "none"  };
-    flex-flow:column
+    display: flex;
+    flex-flow:column;
+    visibility:${({open}) => open ? "visible" : "hidden"  };
+    opacity:${({open}) => open ? 1 : 0  };
+    transition: visibility 0.3s linear 240ms, opacity 240ms;
+
 }
 
 label{
     margin:0;
     padding:0;
+    opacity:${({open}) => open ? 1 : 0  };
+
 }
 
  input{
      width:120px;
+     opacity:${({open}) => open ? 1 : 0  };
+
  }
  textarea{
     height:70px;
@@ -40,14 +53,21 @@ label{
      max-height:70px;
      min-height:60px;
      min-width:270px;
+     opacity:${({open}) => open ? 1 : 0  };
+
  }
  span{
      color:red;
+     opacity:${({open}) => open ? 1 : 0  };
+
  }
 
  button{
  width:80px; 
  margin:auto;
+ opacity:${({open}) => open ? 1 : 0  };
+
+ 
  }
  li{
      list-style:none;
@@ -56,23 +76,27 @@ label{
      justify-content:center;
  }
  ul{
+    visibility:${({open}) => open ? "visible" : "hidden"  };
+    opacity:${({open}) => open ? 1 : 0  };
+    transition: visibility 0.3s linear 300ms, opacity 0s;
      box-shadow: 3px 3px 15px  inset white;
-     display: ${({ open   }) => open ? `flex` : `none` };
+     display: flex;
      align-items:center;
      justify-content:center;
      flex-flow:column;
      
  }
  h1{
-     display: ${({ open   }) => open ? `flex` : `none` };
-     align-items:center;
-     justify-content:center;
+     display: ${({ open   }) => open ? `flex` : `none` }; 
+      align-items:center;
+     justify-content:center; 
  }
  h3{   display: ${({ open   }) => open ? `flex` : `none` };
      align-items:center;
      justify-content:center;
 
  }
+ 
  
 `
 
@@ -81,8 +105,7 @@ const Feedback = () => {
     const { register, handleSubmit, errors } = useForm();
     const [comentarios,setComentarios] = useState([])
     const [open,setOpen] = useState(false)
-
-    const onSubmit = (data, e) => {
+     const onSubmit = (data, e) => {
       
 
         console.log(data)
@@ -98,11 +121,12 @@ const Feedback = () => {
            "Content-Type": "application/json; charset=UTF-8"
        } 
       })   
+      .then(alert("Gracias por tu comentario"))
       .catch( () => {
         alert("Uhm ha ocurrido un error quizas el servidor murio sorry t_t");
       });
-      
-    }
+       
+     }
 
     const llamarApi = async () =>{
         try {
@@ -117,29 +141,44 @@ const Feedback = () => {
     useEffect(() =>{ 
           llamarApi() 
      },[comentarios]) 
-
+     
+  
+    
+   
+        
+    //  const eliminar = (id) =>{
+       
+    //     fetch(`https://backendjonathan-portafolio.herokuapp.com/api/comentarios/${id}`, {
+    //         method: 'DELETE'
+    //      })
+    //      .then(data => data.json())
+    //      .then(traido => console.log(traido))
+    //      .catch(err => console.log(err)) 
+    //  }
+      
     return ( 
           <Fragment>
-        <ReplyIcon className="flecha"  onClick={() => setOpen(!open)}/>
-           <Side  open={open}> 
+        <ReplyIcon className="flecha"  onClick={() => setOpen(!open)  }  />
+           <Side   open={open}> 
  
-             <h1 style={{marginTop:"10px"}}>Hola</h1>
-            <h3>Deja tu comentario sobre que te parecio la pagina !</h3>
             
 
             <form onSubmit={handleSubmit(onSubmit)} >
+            <h1 style={{marginTop:"10px"}}>Hola</h1>
+            <h3>Deja tu comentario sobre que te parecio la pagina !</h3>
+            
                  <label> Nombre </label>
                  <input  name="nombre"  type="text" placeholder="Nombre" ref={register({
           required:{value:true,message:"Nombre Requerido"},
              pattern: {
-            value: /^[ñA-Za-z _]*[ñA-Za-z][ñA-Za-z _]*$/i
+            value: /^[ñA-Za-z_]*[ñA-Za-z][ñA-Za-z_]*$/i
             , message: "Por favor no ingrese espacios,numeros ni caracteres especiales"
             }
             })}/>
                  <span>{errors?.nombre?.message}</span>
                  <label >Comentario</label> 
                 <textarea name="descripcion"   placeholder="..."  ref={register({
-                    required: true, maxLength:40 , minLength: 5
+                    required: true, maxLength:100 , minLength: 5
                 })} />
                 <span>{errors.descripcion?.type === "required" && "Texto Requerido"}
                 {errors.descripcion?.type === "maxLength" && "Lo siento el mensaje es demasiado largo!"} 
@@ -147,7 +186,7 @@ const Feedback = () => {
 
                 </span>
                 <br/>
-                <button type="submit">Submit</button> 
+                <button type="submit">Enviar</button> 
               
             </form>
             <br/>
@@ -163,6 +202,7 @@ const Feedback = () => {
                        <li>
                            {x.descripcion}
                        </li>
+                       {/* <button  onClick={()=>{eliminar(x._id)}} >X</button> */}
                    </ul>
                )
            }
