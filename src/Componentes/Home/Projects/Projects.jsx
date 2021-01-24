@@ -33,15 +33,12 @@ const Projects = () => {
 
     let tittle = "Proyectos"
     const proyectos = [
-        {id:0,titulo:"Sylvertron",parrafo:`Sylvertron .. is a game created, designed by me, a personal project / challenge that I set myself during the 
-        summer of 2020 with more than 160 hours of development.`,
+        {id:0,titulo:"Sylvertron",parrafo:` Sylvertron es un juego diseñado  y creado por mi durante el verano del 2020 con mas de 160 horas de desarollo.`,
         tools :` Unity & C#` ,img:foto,},
-        {id:1,titulo:"C.R.U.D",parrafo:`A simple CRUD application to be able to add & edit users, simple tasks and delete users/task`,
+        {id:1,titulo:"C.R.U.D",parrafo:` Una simple aplicacion C.R.U.D que le permite al usuario crear , eliminar , actualizar y leer sus actividades creadas`,
         tools: `JSX,CSS,React`,img:crud,},
-        {id:2,titulo:"Pokedex",parrafo:`Un proyecto propio con un login simple que permite al usuario capturar Pokemones 
-        gracias a la API de PokeAPi  tambien te permite tenerlos en una lista y tener batallas con tus propios Pokemones.`,pika:pikachu,tools:`JSX,CSS,React`,img:pokedex,},
-    {id:3,titulo:"Tuinfy",parrafo:`Tuinfy es una pagina web que actualmente me encuentro trabajando en ella como Freelance React.js el producto
-    es para una empresa nueva una Startup en LATAM.
+        {id:2,titulo:"Pokedex",parrafo:`Un proyecto propio con un login simple que permite al usuario capturar Pokemones gracias a la API de PokeAPI. También te permite tenerlos en una lista y tener batallas con tus propios pokemones.`,pika:pikachu,tools:`JSX,CSS,React`,img:pokedex,},
+    {id:3,titulo:"Tuinfy",parrafo:`Tuinfy es una página web en la que me encuentro trabajando como Freelance  actualmente. El producto es para una nueva empresa Startup en LATAM.
     `,tools:`JSX,CSS,React,Firebase`,img:pc,}, 
     ]
     return ( 

@@ -129,7 +129,7 @@
       } 
     
       }
-      @media all and (max-width:300px){
+      @media all and (max-width:299px){
    
         .card-img { 
            width: 180px;

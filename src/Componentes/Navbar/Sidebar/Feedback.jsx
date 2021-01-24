@@ -74,17 +74,16 @@ label{
      display: ${({ open   }) => open ? `flex` : `none` };
      align-items:center;
      justify-content:center;
+      
  }
  ul{
     visibility:${({open}) => open ? "visible" : "hidden"  };
     opacity:${({open}) => open ? 1 : 0  };
     transition: visibility 0.3s linear 300ms, opacity 0s;
-     box-shadow: 3px 3px 15px  inset white;
-     display: flex;
-     align-items:center;
-     justify-content:center;
+     box-shadow: 3px 3px 15px  inset white; 
      flex-flow:column;
-     
+     width:99%; 
+     margin-left:3.5px;
  }
  h1{
      display: ${({ open   }) => open ? `flex` : `none` }; 
@@ -146,15 +145,15 @@ const Feedback = () => {
     
    
         
-    //  const eliminar = (id) =>{
+     const eliminar = (id) =>{
        
-    //     fetch(`https://backendjonathan-portafolio.herokuapp.com/api/comentarios/${id}`, {
-    //         method: 'DELETE'
-    //      })
-    //      .then(data => data.json())
-    //      .then(traido => console.log(traido))
-    //      .catch(err => console.log(err)) 
-    //  }
+        fetch(`https://backendjonathan-portafolio.herokuapp.com/api/comentarios/${id}`, {
+            method: 'DELETE'
+         })
+         .then(data => data.json())
+         .then(traido => console.log(traido))
+         .catch(err => console.log(err)) 
+     }
       
     return ( 
           <Fragment>
@@ -196,13 +195,17 @@ const Feedback = () => {
                    <ul key={x._id}   >
                         <li>
                            {x.nombre}
+                           
+                       </li>
+                       <li>
+                           {x.fecha}
                        </li>
                        <img src={x.avatar} alt="" style={{width:"30px"}}/>
-
+           
                        <li>
                            {x.descripcion}
                        </li>
-                       {/* <button  onClick={()=>{eliminar(x._id)}} >X</button> */}
+                       <button  onClick={()=>{eliminar(x._id)}} >X</button>
                    </ul>
                )
            }

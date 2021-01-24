@@ -19,7 +19,7 @@ const Home = (props) => {
       // },[])
  
     const welcome = [
-        {saludar:"Hola",presentacion:`Mi nombre es Jonathan`,profesion:"Soy Web Developer",tools:"JSX,CSS,REACT,EXPRESS,MONGODB"}
+        {saludar:"Hola",presentacion:`Mi nombre es Jonathan`,profesion:"Soy Web Developer",tools:" JSX, CSS, REACT, EXPRESS, MONGODB"}
     ] 
      
        if( lanzar)

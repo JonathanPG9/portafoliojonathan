@@ -46,7 +46,7 @@ const ProjectsVisual = (props) => {
                                       :"" }
                                            {x.id ===  3  ? 
                                        <Boton color="secondary"     startIcon={<BuildIcon/> } > 
-                                          <h1>Developing...</h1>
+                                          <h1>En desarrollo...</h1>
                                       </Boton> 
                                       :"" }
                                          
