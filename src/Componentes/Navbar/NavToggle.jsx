@@ -24,6 +24,7 @@ import styled from "styled-components"
       transition: padding 1.3s;
       opacity: ${({ open   }) => open ? 1 : 0 };
        color: ${({nav}) => nav ? `white` : `black` };  
+       margin-top:33px;
   }
   .link:hover{
       color: red;
@@ -56,11 +57,11 @@ const NavTogle = (props) => {
                 <UL   open={open} nav={nav}    > 
                        
                 <Link className="link"  to="/"     >
-                    <li onClick={() => props.setOpen(!open)} >  Home </li>
+                    <li  onClick={() => props.setOpen(!open)} >  Inicio </li>
                
                 </Link>
                 <Link className="link"    to="/about"  >
-                    <li onClick={() => props.setOpen(!open)} >      Sobre    </li>
+                    <li onClick={() => props.setOpen(!open)} >   Sobre mi   </li>
                 </Link>
                 <Link className="link"   to="/contacto"  >
                     <li onClick={() => props.setOpen(!open)} >   Contacto   </li>

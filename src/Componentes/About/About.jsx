@@ -12,7 +12,16 @@ import react from "../Imagenes/react.png"
 import express from "../Imagenes/Express.png"
 import mongo from "../Imagenes/mongo.png"
 const About = (props) => {
-    const[certiJs,setCertiJs] = useState(0)
+  const up = () => {
+      
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      }) 
+}
+  
+  up()
+const[certiJs,setCertiJs] = useState(0)
      useEffect(() =>{
         setTimeout(() => {
             props.setNav(true)

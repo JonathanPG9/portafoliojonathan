@@ -17,7 +17,15 @@ const Home = (props) => {
       // }
       // llamarNombre() 
       // },[])
- 
+      const up = () => {
+      
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          }) 
+    }
+      
+      up()
     const welcome = [
         {saludar:"Hola",presentacion:`Mi nombre es Jonathan`,profesion:"Soy Web Developer",tools:" JSX, CSS, REACT, EXPRESS, MONGODB"}
     ] 

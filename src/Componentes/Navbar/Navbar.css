@@ -79,3 +79,29 @@
     }
   
   }
+
+    
+  @media all and (max-width:560px) {
+    .nav-links{
+      display: none;
+    }
+    .head-normal {
+      position: sticky;
+       top: 0; 
+      z-index: 100;
+    }
+    .nav-normal {
+      height: 12.3vh;
+      background: black
+    }
+    .head-nulo {
+      position: sticky;
+      top: 0; 
+     z-index: 100;
+    }
+    .nav-nulo {
+      height: 10.3vh;
+   
+    }
+  
+  }

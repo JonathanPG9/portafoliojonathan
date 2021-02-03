@@ -82,7 +82,7 @@ const Certi = styled.div`
                )
           }  
               <Error className="mostrar" >{props.diplomas[10].nombre}</Error>
-
+             <br/>
                   <CancelPresentationIcon    className="close" onClick={() => props.setCerti(!props.certi)} /> 
         
                        

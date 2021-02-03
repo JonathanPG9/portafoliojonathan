@@ -6,7 +6,7 @@
 
 
 .skills{
-    height:50vh;
+    height:55vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
  .skills-body-texto h1 {
    font-size: 50px;
    letter-spacing: 4px;
-   font-weight: 300;
+   font-weight: 600;
  }
  .skills-body-texto h4 {
    font-size: 22px;
@@ -51,17 +51,20 @@
  .skills-body-texto p {
    margin: 15px 15px;
    font-family: "Rosarivo", serif;
-   font-size: 21;
+    font-size: 21px
  }
  .certi{
    display: flex;
    flex-flow: column;
    justify-content: center;
-   align-items: center;
+   align-items: center;  
  }
 
 .lanzar{
+  margin-top: 15px;
    cursor: pointer;
+   transform: scale(2.2);   
+   margin-bottom: 30px;
 }
 
 

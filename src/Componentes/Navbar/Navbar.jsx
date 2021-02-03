@@ -16,10 +16,10 @@ const Navbar = ({nav}) => {
                       <li >  Jonathan </li>
                         </Link >
                         <Link className="link"  to="/">
-                            <li>    Home </li>
+                            <li>  Inicio </li>
                         </Link>
                         <Link className="link"    to="/about"  >
-                            <li>    Sobre    </li>
+                            <li>    Sobre mi  </li>
                         </Link>
                         <Link className="link"   to="/contacto"  >
                             <li>   Contacto   </li>

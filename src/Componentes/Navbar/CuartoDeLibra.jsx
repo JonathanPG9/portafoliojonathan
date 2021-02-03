@@ -12,7 +12,7 @@ flex-flow:column;
 justify-content:space-around;
 cursor:pointer;
 align-items:center;
-top:25px;
+top:30px;
 z-index:300;
 margin-left: ${({open}) => open ? `93px` : 0};
 transition: margin-left 1.7s;

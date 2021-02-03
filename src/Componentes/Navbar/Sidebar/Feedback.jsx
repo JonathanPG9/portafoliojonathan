@@ -1,8 +1,8 @@
 import React, {useState,useEffect, Fragment   } from 'react';
 import styled from "styled-components"
 import { useForm } from "react-hook-form";
-import ReplyIcon from '@material-ui/icons/Reply';
-
+import AddCommentIcon from '@material-ui/icons/AddComment';
+import CloseIcon from '@material-ui/icons/Close';
 const Side = styled.div`   
  display:flex;
  flex-flow:column; 
@@ -19,7 +19,7 @@ const Side = styled.div`
  text-align:center;
  overflow-y: scroll; 
  
- @media (max-width:550px){
+ @media (max-width:760px){
 
     width:  ${({ open   }) => open ? `100%` : `0px` };
  }
@@ -95,7 +95,14 @@ label{
      justify-content:center;
 
  }
- 
+ .close{
+    transform:scale(1.5);    
+    top: 10px;     
+   z-index:230; 
+  position:fixed; 
+  color:white; 
+  cursor: pointer; 
+ }
  
 `
 
@@ -157,14 +164,21 @@ const Feedback = () => {
       
     return ( 
           <Fragment>
-        <ReplyIcon className="flecha"  onClick={() => setOpen(!open)  }  />
-           <Side   open={open}> 
- 
+            
+            <Side   open={open}> 
+            {
+            open ?  
+            <CloseIcon  className="close"  onClick={() => setOpen(!open)  }  />  
+            :  
+            <AddCommentIcon className="comments"  onClick={() => setOpen(!open)  }  /> 
+            }
             
 
+             
+
             <form onSubmit={handleSubmit(onSubmit)} >
-            <h1 style={{marginTop:"10px"}}>Hola</h1>
-            <h3>Deja tu comentario sobre que te parecio la pagina !</h3>
+            <h1 style={{marginTop:"10px"}}>Comentarios.</h1>
+            <h3>¡Hola! Deja un comentario para saber qué te ha parecido la página.</h3>
             
                  <label> Nombre </label>
                  <input  name="nombre"  type="text" placeholder="Nombre" ref={register({
@@ -205,7 +219,7 @@ const Feedback = () => {
                        <li>
                            {x.descripcion}
                        </li>
-                       <button  onClick={()=>{eliminar(x._id)}} >X</button>
+                       {/* <button  onClick={()=>{eliminar(x._id)}} >X</button> eliminar feedback */}
                    </ul>
                )
            }

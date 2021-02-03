@@ -29,7 +29,7 @@ const ProjectsVisual = (props) => {
                                          <p>{x.parrafo} </p> 
                                          <p   >Herramientas: {x.tools}</p>
                                        {x.id ===  0  ? 
-                                       <Boton color="secondary" startIcon={<SportsEsportsIcon/> } > 
+                                       <Boton color="secondary"   onClick={() => window.open(props.projectSylvertron)} startIcon={<SportsEsportsIcon/> } > 
                                           <h1>Ver mas...</h1>
                                       </Boton> 
                                       :"" }
@@ -40,7 +40,7 @@ const ProjectsVisual = (props) => {
                                       </Boton> 
                                       :"" }
                                        {x.id ===  2  ? 
-                                       <Boton color="secondary" startIcon={<SportsEsportsIcon/> } > 
+                                       <Boton color="secondary"   onClick={() => window.open(props.projectPikachu)}   startIcon={<SportsEsportsIcon/> } > 
                                           <h1>Ver mas...</h1>
                                       </Boton> 
                                       :"" }
@@ -49,6 +49,19 @@ const ProjectsVisual = (props) => {
                                           <h1>En desarrollo...</h1>
                                       </Boton> 
                                       :"" }
+                                      {x.id === 4  ? 
+                                       <Boton color="secondary"  onClick={() => window.open(props.projectAuth)}      startIcon={<BuildIcon/> } > 
+                                          <h1>Ver mas...</h1>
+                                      </Boton> 
+                                      :"" }
+
+                                     { 
+                                      x.id === 5 ?
+                                      <Boton color="secondary"  onClick={() => window.open(props.projectPortafolio)}      startIcon={<BuildIcon/> } > 
+                                      <h1>Ver mas...</h1>
+                                  </Boton> 
+                                    :"" }
+                                     
                                          
                                   </div>
                               </div>

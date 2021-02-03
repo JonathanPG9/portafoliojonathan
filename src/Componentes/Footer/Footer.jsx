@@ -13,6 +13,9 @@ const Footer = () => {
     let linkedin = "https://www.linkedin.com/in/jonathan-paniagua-802703149/"
     let wsp = "https://api.whatsapp.com/send?phone=5491122856540&text=Hola%20Jonathan%20!"
     let github = "https://github.com/JonathanPG9"
+
+   
+
     const up = () => {
       
         window.scrollTo({
