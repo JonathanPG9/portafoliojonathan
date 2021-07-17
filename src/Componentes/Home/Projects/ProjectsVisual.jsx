@@ -62,6 +62,12 @@ const ProjectsVisual = (props) => {
                                   </Boton> 
                                     :"" }
                                      
+                                     { 
+                                      x.id === 6 ?
+                                      <Boton color="secondary"  onClick={() => window.open(props.felty)}      startIcon={<BuildIcon/> } > 
+                                      <h1>Ver mas...</h1>
+                                  </Boton> 
+                                    :"" }
                                          
                                   </div>
                               </div>

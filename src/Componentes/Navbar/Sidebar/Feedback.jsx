@@ -118,22 +118,21 @@ const Feedback = () => {
         e.target.reset() 
 
         fetch("https://backendjonathan-portafolio.herokuapp.com/api/comentarios", {
-       method: "POST",
+       method: "POST",  
        body:JSON.stringify({
         nombre: data.nombre,
         descripcion : data.descripcion
        }),
        headers:{
            "Content-Type": "application/json; charset=UTF-8"
-       } 
+       }  
       })   
       .then(alert("Gracias por tu comentario"))
-      .catch( () => {
+      .catch( (error) => {
         alert("Uhm ha ocurrido un error quizas el servidor murio sorry t_t");
       });
        
-     }
-
+     } 
     const llamarApi = async () =>{
         try {
             const llamando =  await fetch("https://backendjonathan-portafolio.herokuapp.com/api/comentarios/")
@@ -190,7 +189,7 @@ const Feedback = () => {
             })}/>
                  <span>{errors?.nombre?.message}</span>
                  <label >Comentario</label> 
-                <textarea name="descripcion"   placeholder="..."  ref={register({
+                <textarea name="descripcion"   placeholder="Ingrese su comentario"  ref={register({
                     required: true, maxLength:100 , minLength: 5
                 })} />
                 <span>{errors.descripcion?.type === "required" && "Texto Requerido"}

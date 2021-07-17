@@ -18,18 +18,23 @@ const About = (props) => {
         top: 0,
         behavior: 'smooth',
       }) 
-}
-  
+}      
   up()
-const[certiJs,setCertiJs] = useState(0)
-     useEffect(() =>{
+
+      const[certiJs,setCertiJs] = useState(0)
+      const [diplomasLength,setDiplomasLength] = useState(0) 
+      useEffect(() =>{
         setTimeout(() => {
             props.setNav(true)
         }, 20);
-    })
-     const[certi,setCerti] = useState(false)
-       const diplomas = [
-        {id:0,nombre:"UTN BA JS",nota:10,imagen:jsUtn,type:"js"},
+      })
+
+      const[certi,setCerti] = useState(false)
+      const diplomas = [
+        {
+        id:0,nombre:"UTN BA JS",
+        nota:10,imagen:jsUtn,type:"js"
+        },
         {id:1,nombre:"Linkedin Examen JS",nota:"95%",imagen:lnJs,type:"js"},
         {id:2,nombre:"Linkedin Examen React",nota:10,imagen:react,type:"js"},
         {id:3,nombre:"Acamica Express",nota:null,imagen:express,type:"js"},
@@ -41,33 +46,31 @@ const[certiJs,setCertiJs] = useState(0)
         {id:9,nombre:"SoloLearn C#",nota:null,imagen:csharp}, 
         {id:10,nombre:"Error, Ancho de pantalla chico",estado:false}
     ] 
+    const [certificados,setCertificados] = useState(diplomas)
+
+    useEffect(() =>{
+    setDiplomasLength(certificados.length)
+    },[certificados,setDiplomasLength])
+
 
       return ( 
-        <Fragment>
-         
-     
-               {certi ?  
+        <Fragment> 
+              {certi ?  
               <AboutCerti
               diplomas={diplomas}
               certi={certi}
               setCerti={setCerti} 
               certiJs={certiJs}
               setCertiJs={setCertiJs} 
-              
+              diplomasLength={diplomasLength}
               />
               :
               <AboutVisual 
               certi={certi}
-              setCerti={setCerti} 
-          
-               /> 
-            }
-          
-           
-            
-            </Fragment>
-
-         
+              setCerti={setCerti}  
+              /> 
+            } 
+            </Fragment> 
             
       );
 }

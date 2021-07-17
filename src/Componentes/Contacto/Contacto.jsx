@@ -9,25 +9,13 @@ const Contacto = (props) => {
     setTimeout(() => {
         props.setNav(true)
     }, 20);
-})
-const up = () => {
-      
-  window.scrollTo({
-      top: 240,
-      behavior: 'smooth',
-    }) 
-}
-
-up()
+}) 
     const { register, handleSubmit, errors } = useForm();
 
     const enviar = async (data,e) =>{
-      alert("Mensaje enviado correctamente");
-
-     e.target.reset()
-   
+  
       fetch("https://backendjonathan-portafolio.herokuapp.com/api/form", {
-       method: "POST",
+       method: "POST",  
        body:JSON.stringify({
         nombre: data.nombre,
         asunto : data.asunto,
@@ -36,14 +24,17 @@ up()
        }),
        headers:{
            "Content-Type": "application/json; charset=UTF-8"
-       } 
+       }  
+       
       })   
-      .catch(function() {
+      .then( () =>  alert("Mensaje enviado correctamente")  )
+      .catch( () => {
         alert("Uhm ha ocurrido un error quizas el servidor murio sorry t_t");
       });
   
-     }
-      
+      e.target.reset()
+     } 
+ 
 
     return ( 
         <Fragment>

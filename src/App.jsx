@@ -22,8 +22,7 @@ function App() {
     let  loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;  
     setTimeout(()=>{
        setCarga(true)
-       console.log(loadTime)
-    },loadTime + 444) 
+     },loadTime + 444) 
    })
  
   return (

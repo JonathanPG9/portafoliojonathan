@@ -49,7 +49,7 @@ const Certi = styled.div`
  const AboutCerti = (props) => {
 
    const nextJs = () =>{   
-    props.certiJs === 9 ? props.setCertiJs(0) : props.setCertiJs(props.certiJs + 1)
+    props.certiJs === props.diplomasLength - 2 ? props.setCertiJs(0) : props.setCertiJs(props.certiJs + 1)
    }
    const backJs = () =>{   
     props.certiJs <= 0 ?     props.setCertiJs(0) :  props.setCertiJs(props.certiJs - 1)
@@ -63,9 +63,7 @@ const Certi = styled.div`
           
        <div className="diplomas"    > 
            { 
-              props.diplomas.map((x) => 
-               
-                   
+              props.diplomas.map((x) =>  
                     <div className="certificados" key={x.id} >
                                  
                        {

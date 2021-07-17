@@ -68,7 +68,7 @@
 }
 
 
- @media all and (max-width: 1220px) {
+ @media all and (max-width: 1800px) {
    .skills {
      height: auto;
      word-wrap: break-word;

@@ -33,24 +33,30 @@
      margin: auto; 
    }
   .nav-links li {
-    text-decoration: none;
-    margin: 50px;
-     font-size: 17px;
-    font-weight: bold;
-    overflow: hidden;
-    cursor: pointer; 
-    color:white;
-    margin-top: 40px;
+ 
   }
   .link {
     list-style: none;
-    text-decoration: none;
+    text-decoration: none; 
+    margin: 50px;
+     font-size: 17px;
+    font-weight: bold; 
+    cursor: pointer; 
+    color:white;
+    margin-top: 40px;
+    
   }
-  .link-name {
+  .link-name { 
+    
+    font-weight: bold; 
+     margin-top:-7.5px;
+    color:white;
     position: absolute;
     margin-right: 80%;
+    font-size:17px;
     list-style: none;
     text-decoration: none;
+    
   }
   
   

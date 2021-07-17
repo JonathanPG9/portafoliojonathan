@@ -14,7 +14,7 @@ cursor:pointer;
 align-items:center;
 top:30px;
 z-index:300;
-margin-left: ${({open}) => open ? `93px` : 0};
+margin-left: ${({open}) => open ? `66px` : 0};
 transition: margin-left 1.7s;
 transition: all 2s;
 

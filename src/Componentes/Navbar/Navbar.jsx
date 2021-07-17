@@ -12,19 +12,26 @@ const Navbar = ({nav}) => {
                 <nav className={nav ? "nav-normal" : "nav-nulo"} >
                 <CuartoDeLibra  nav={nav}  />
                     <ul className="nav-links"   >
-                      <Link className="link-name"    to="/">
-                      <li >  Jonathan </li>
+                          <li className="link-name"  >
+                      <Link  className="link-name"   to="/">
+                       Jonathan 
                         </Link >
+                         </li>
+                            <li>
                         <Link className="link"  to="/">
-                            <li>  Inicio </li>
+                            Inicio 
                         </Link>
+                         </li>
+  <li>    
                         <Link className="link"    to="/about"  >
-                            <li>    Sobre mi  </li>
+                               Sobre mi 
                         </Link>
+                          </li>
+                            <li>   
                         <Link className="link"   to="/contacto"  >
-                            <li>   Contacto   </li>
+                              Contacto   
                         </Link>
-                       
+                        </li>
                     </ul>
                     
                 </nav>

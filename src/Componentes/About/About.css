@@ -60,7 +60,7 @@
     font-size: 21px
   }
   
-  @media all and (max-width: 1220px) {
+  @media all and (max-width: 1800px) {
     .about {
       height: auto;
       word-wrap: break-word;

@@ -6,6 +6,7 @@ import crud from "../../Imagenes/crud.jpg"
 import pc from "../../Imagenes/imagen2.jpg"
 import auth from "../../Imagenes/auth.png"
 import portafolio from "../../Imagenes/portafolio.png"
+import feltyImg from "../../Imagenes/felty.png"
 
 const Projects = () => {
       
@@ -15,6 +16,8 @@ const Projects = () => {
       let projectAuth = "https://github.com/JonathanPG9/authapp"
       let projectPortafolio = "https://github.com/JonathanPG9/portafoliojonathan"
       let projectSylvertron = "https://jonathan-paniagua.itch.io/sylvertron-alfa"
+      let felty = "https://feltymvp.web.app"
+
      useEffect(() =>{
          
         const llamarPikachu = async () =>{
@@ -47,7 +50,9 @@ const Projects = () => {
     `,tools:`JSX,CSS,React,Firebase`,img:pc,},  
     {id:4,titulo:"AuthApp",parrafo:`AuthApp es una API Authentication desarollada con Nodejs que le permite al usuario  registrarse para luego  poder logear en la app , para poder acceder a su perfil tengo pensado añadir el lado del frontend proximamente.`,tools:`NodeJs, Express , JSW , MongoDB, Bcrpyt`,img:auth,},  
     {id:5,titulo:"Mi Portafolio",parrafo:` Desarollado en dos meses, tratando de minimizar bugs y poder demostrar mis habilidades , esta desarollado en Frontend con React y  en  el Backend con NodeJs conectado a la base de datos MongoDB.
-    `,tools:`JSX, CSS, React, Firebase, Nodejs, Express, Nodemailer , Heroku, MongoDB, Postman`,img:portafolio,}  
+    `,tools:`JSX, CSS, React, Firebase, Nodejs, Express, Nodemailer , Heroku, MongoDB, Postman`,img:portafolio }  ,
+    {id:6,titulo:"Felty",parrafo:`Una web creada por mi mismo creando el backend y el front desde 0. Todavia se encuentra en desarollo`
+    ,tools:`JSX, CSS, React, Firebase, Nodejs, Express, Nodemailer , Heroku, MongoDB, Postman`,img:feltyImg}  
     ]
     return ( 
 
@@ -61,6 +66,7 @@ const Projects = () => {
                projectPikachu={projectPikachu}
                projectPortafolio={projectPortafolio}
                projectSylvertron={projectSylvertron}
+               felty={felty}
                />
  
         </Fragment>
